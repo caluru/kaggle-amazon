@@ -19,13 +19,10 @@ def printDigit(digit):
 #Extract Train Data
 f = open(filepath + 'train.csv','r')
 r = csv.reader(f, delimiter = ',')
+r.next()
 train = []
 trainLabels = []
-first = True
 for row in r:
-	if first:
-		first = not first
-		continue
 	train.append(np.array([int(i) for i in row[1:]]))
 	trainLabels.append(int(row[0]))
 trainLabels = np.array(trainLabels)
@@ -34,12 +31,7 @@ trainLabels = np.array(trainLabels)
 test = []
 f = open(filepath + 'test.csv','r')
 r = csv.reader(f, delimiter = ',')
+r.next()
 test = []
-first = True
 for row in r:
-	if first:
-		first = not first
-		continue
 	test.append(np.array([int(i) for i in row]))
-
-
