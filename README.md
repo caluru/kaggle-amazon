@@ -1,4 +1,4 @@
 # kaggle-amazon
-Code for submission to Planet: Understanding the Amazon From Space Kaggle challenge
+Basic examples to understand tensorflow
 
 Collaborators: Chaitanya Aluru, Purva Shanker
