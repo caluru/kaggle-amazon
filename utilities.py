@@ -15,7 +15,10 @@ def generatePoints(func, nVars, nPoints):
 	points = []
 	classes = []
 	for i in range(nPoints):
-		temp = [random.randint(-100,100) for _ in range(nVars)]
+		sgn = 0
+		while(sgn == 0):
+			temp = [random.randint(-100,100) for _ in range(nVars)]
+			sgn = np.sign(func(temp))
 		points.append(temp)
-		classes.append(np.sign(func(temp)))
+		classes.append(sgn)
 	return points, classes
